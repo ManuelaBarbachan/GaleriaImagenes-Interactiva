@@ -7,13 +7,13 @@ export default function Carrousel(){
     const intervalRef = useRef(null);
 
     const next = () => {
-      setIndex(i => (i < catList.length - 1 ? i + 1 : 0));
+      setIndex(i => (i < imageList.length - 1 ? i + 1 : 0));
     };
 
     const play = (ms = 2000) => {
       if (intervalRef.current !== null) return;
       intervalRef.current = setInterval(() => {
-        setIndex(i => (i < catList.length - 1 ? i + 1 : 0));
+        setIndex(i => (i < imageList.length - 1 ? i + 1 : 0));
       }, ms);
       setIsPlaying(true);
     };
@@ -43,12 +43,12 @@ export default function Carrousel(){
       </nav>
       <div>
         <ul>
-          {catList.map((cat, i) => (
-            <li key={cat.id}>
+          {imageList.map((image, i) => (
+            <li key={image.id}>
               <img
                 className={index === i ? 'active' : ''}
-                src={cat.imageUrl}
-                alt={'Cat #' + cat.id}
+                src={image.imageUrl}
+                alt={'Imagen #' + image.id}
               />
             </li>
           ))}
@@ -58,27 +58,27 @@ export default function Carrousel(){
   );
 }
 
-const catCount = 10;
-const catList = new Array(catCount);
-for (let i = 0; i < catCount; i++) {
-  const bucket = Math.floor(Math.random() * catCount) % 2;
+const imageCount = 10;
+const imageList = new Array(imageCount);
+for (let i = 0; i < imageCount; i++) {
+  const bucket = Math.floor(Math.random() * imageCount) % 2;
   let imageUrl = '';
   switch (bucket) {
     case 0: {
-      imageUrl = "https://placecats.com/neo/250/200";
+      imageUrl = "https://media.istockphoto.com/id/2207483178/es/foto/vista-trasera-hombre-chino-asi%C3%A1tico-que-mira-a-jabal-alfil-roca-del-elefante-en-el-paisaje-del.jpg?s=612x612&w=0&k=20&c=tS900eDojnt548fxB0KL4DoN15dnDoWYrhR65pGpfDA=";
       break;
     }
     case 1: {
-      imageUrl = "https://placecats.com/millie/250/200";
+      imageUrl = "https://media.istockphoto.com/id/2169995482/es/foto/paisaje-de-la-cumbre-de-roys-peak-con-monta%C3%B1a-brumosa-y-turista-disfrutando-en-oto%C3%B1o-en-nueva.jpg?s=612x612&w=0&k=20&c=uhZDzuuPblvtxO3tB7lZotlph-WlxsZ6RpGLUvGvPcE=";
       break;
     }
     case 2:
     default: {
-      imageUrl = "https://placecats.com/bella/250/200";
+      imageUrl = "https://media.istockphoto.com/id/2192719994/es/foto/hawaii-aerial-seascape.jpg?s=612x612&w=0&k=20&c=PkG01ejGr3g1Aivg_QF32Sd0KxFdXiO_tTd1zJJ2lEY=";
       break;
     }
   }
-  catList[i] = {
+  imageList[i] = {
     id: i,
     imageUrl,
   };
