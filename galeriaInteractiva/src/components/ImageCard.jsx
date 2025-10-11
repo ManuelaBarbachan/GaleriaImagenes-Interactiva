@@ -23,9 +23,9 @@ function ImageCard({ image, onLike }) {
   }, [image.id]);
 
   return (
-    <div className="image-card" style={{ display: "inline-block", margin: 8 }}>
+    <div className="image-card">
       <img src={image.imageUrl} alt={`img-${image.id}`} style={styles} />
-      <div style={{ display: "flex", justifyContent: "space-between", marginTop: 6 }}>
+      <div className="info">
         <button onClick={handleLike}>❤️ {image.likes}</button>
         <small style={{ alignSelf: "center" }}>#{derived}</small>
       </div>
