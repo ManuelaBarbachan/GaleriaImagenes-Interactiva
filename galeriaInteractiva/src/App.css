@@ -40,3 +40,22 @@
 .read-the-docs {
   color: #888;
 }
+
+.image-card{
+   display: inline-block;
+   margin: 8px;
+}
+
+.image-card .info{ 
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+button:hover {
+  background-color: #9b44bb; 
+  color: #ffffff;
+}
+
+button:active {
+  transform: scale(0.97);
+}

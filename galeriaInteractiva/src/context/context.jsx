@@ -1,3 +1,5 @@
 import { createContext } from "react";
 
-export const ImageSizeContext = createContext(null);
+const ImageSizeContext = createContext({ size: "medium", setSize: () => {} });
+
+export default ImageSizeContext;
