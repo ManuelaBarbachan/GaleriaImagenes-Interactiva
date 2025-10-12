@@ -86,7 +86,7 @@ export default function Gallery(){
 
         <div style={{ marginBottom: 12 }}>
           <div>
-            <h4>Galería</h4>
+            <h1 id="gallery"><strong>GALERÍA</strong></h1>
             <div>
               <img
                 src={images[index].imageUrl}
@@ -98,7 +98,7 @@ export default function Gallery(){
         </div>
 
         <div>
-          <h4>Imagenes</h4>
+          <h4>Imágenes</h4>
           <div>
             {images.map(img => (
               <ImageCard key={img.id} image={img} onLike={handleLike} />

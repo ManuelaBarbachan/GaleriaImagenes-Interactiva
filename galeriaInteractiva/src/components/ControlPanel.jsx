@@ -13,8 +13,8 @@ export default function ControlPanel({ onPlay, onStop, isPlaying, onNext, totalL
       <span style={{ marginLeft: 12 }}>Total Likes: <strong>{totalLikes}</strong></span>
 
       <span style={{ marginLeft: 12 }}>
-        Size:
-        <button disabled={currentSize === "small"} onClick={() => onSetSize("small")}>S</button>
+        Size: 
+        <button style={{marginLeft: 8}} disabled={currentSize === "small"} onClick={() => onSetSize("small")}>S</button>
         <button disabled={currentSize === "medium"} onClick={() => onSetSize("medium")}>M</button>
         <button disabled={currentSize === "large"} onClick={() => onSetSize("large")}>L</button>
       </span>

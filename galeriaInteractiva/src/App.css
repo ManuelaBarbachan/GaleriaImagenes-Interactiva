@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: "Jost";
 }
 
 .logo {
@@ -33,6 +34,10 @@
   }
 }
 
+#gallery {
+  text-shadow: 5px 5px 4px rgba(155, 68, 187, 0.5);
+}
+
 .card {
   padding: 2em;
 }
@@ -51,6 +56,11 @@
   justify-content: space-between;
   margin-top: 6px;
 }
+
+button {
+  margin: 5px;
+}
+
 button:hover {
   background-color: #9b44bb; 
   color: #ffffff;
@@ -58,4 +68,9 @@ button:hover {
 
 button:active {
   transform: scale(0.97);
+}
+
+img {
+  border: 3px #6e1b8c solid;
+  border-radius: 10px;
 }

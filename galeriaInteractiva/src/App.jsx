@@ -5,13 +5,9 @@ import './App.css'
 import Gallery from './components/Gallery.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <Gallery />
-      </div>
+      <Gallery/>
     </>
   )
 }
