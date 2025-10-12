@@ -43,11 +43,19 @@
 
 .image-card{
    display: inline-block;
-   margin: 8 
+   margin: 8px;
 }
 
 .image-card .info{ 
   display: flex;
   justify-content: space-between;
-  margin-top: 6;
+  margin-top: 6px;
+}
+button:hover {
+  background-color: #9b44bb; 
+  color: #ffffff;
+}
+
+button:active {
+  transform: scale(0.97);
 }

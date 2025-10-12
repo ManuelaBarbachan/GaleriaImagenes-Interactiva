@@ -48,7 +48,7 @@ export default function Gallery(){
     const play = useCallback((ms = 2000) => {
       if (intervalRef.current !== null) return;
       intervalRef.current = setInterval(() => {
-        setIndex(i => (i < images.length - 1 ? i + 1 : 0));
+        next();
       }, ms);
       setIsPlaying(true);
     }, []);
